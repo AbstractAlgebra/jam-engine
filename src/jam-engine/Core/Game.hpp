@@ -22,7 +22,7 @@ public:
 
 	int execute();
 
-	void setLevel(Level *level);
+    void setLevel(std::unique_ptr<je::Level> level);
 
 	void setTitle(const std::string& title);
 

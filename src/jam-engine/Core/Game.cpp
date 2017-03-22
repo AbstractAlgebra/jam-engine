@@ -83,10 +83,10 @@ int Game::execute()
 	return 0;
 }
 
-void Game::setLevel(Level *level)
+void Game::setLevel(std::unique_ptr<je::Level> level)
 {
 	oldlevels.push_back(std::move(this->level));
-	this->level.reset(level);
+    this->level = std::move(level);
 }
 
 void Game::setTitle(const std::string& title)
