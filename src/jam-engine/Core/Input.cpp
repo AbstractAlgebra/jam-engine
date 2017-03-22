@@ -242,8 +242,8 @@ float Input::axisPos(unsigned int joyID, sf::Joystick::Axis axis) const
 {
 	if (!sf::Joystick::hasAxis(joyID, axis))
 		return 0;
-	int val = sf::Joystick::getAxisPosition(joyID, axis);
-	if (axis > 101 || axis < -101) // between -100 and 100 my ass, SFML!
+	const int val = sf::Joystick::getAxisPosition(joyID, axis);
+	if (val > 101 || val < -101) // between -100 and 100 my ass, SFML!
 		return 0;
 	return val / 100.f;
 }

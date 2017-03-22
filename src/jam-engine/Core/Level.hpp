@@ -125,7 +125,7 @@ public:
 
 #ifdef JE_XML_LEVELS
 	void loadXMLMap(const std::string& filename);
-#endif / /JE_XML_LEVELS
+#endif //JE_XML_LEVELS
 
 	void debugDrawRect(const sf::Rect<int>& rect, sf::Color outlineColor, sf::Color fillColor = sf::Color::Transparent, int outlineThickness = 1);
 

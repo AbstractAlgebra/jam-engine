@@ -7,7 +7,6 @@
 #include <string>
 #include <unordered_map>
 
-
 namespace je
 {
 
@@ -22,8 +21,7 @@ public:
 
 private:
 
-	std::unordered_map<std::string, std::unique_ptr<sf::Texture>> textures;
-
+    std::unordered_map<std::string, sf::Texture> textures;
 	std::string path;
 };
 

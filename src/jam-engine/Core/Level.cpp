@@ -134,7 +134,7 @@ void Level::update()
 		for (std::unique_ptr<Entity>& entity : p.second)
 			depthBuffer.push_back(entity.get());
 	std::sort(depthBuffer.begin(), depthBuffer.end(), [](const Entity *a, const Entity *b) -> bool {
-		return a->getDepth() == b->getDepth() ? (int) a > (int) b : a->getDepth() > b->getDepth();
+		return a->getDepth() == b->getDepth() ? (int)(size_t) a > (int)(size_t) b : a->getDepth() > b->getDepth();
 	});
 }
 
